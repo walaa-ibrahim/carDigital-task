@@ -1,26 +1,106 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+a{
+    text-decoration: none;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+p{
+    margin-bottom: 0;
 }
-
-* {
-  box-sizing: border-box;
+/*carousel*/
+.carousel-caption{
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: rgba(231, 178, 178, 0.2);
 }
+.carousel-control-next-icon {
+    background-image: url('/sliderArrNext.svg');
+}
+.carousel-control-prev-icon {
+    background-image: url('/sliderArrPrev.svg');
+}
+/*accordion*/
+.accordion-item{
+    margin:12px 0;
+    background-color: #fafbfb;
+    border: solid 1px #f4f4f4 !important;
+        border-radius: 4px;
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    transition: .3s;
+}
+.accordion-button{
+   border-color: transparent !important;
+   outline: 0;
+}
+.accordion-button:not(.collapsed){
+    color:#484848;
+    background-color: transparent;
+    border-bottom: 0;
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 transparent;
+     padding-bottom: 0;
+}
+.accordion-button:focus {
+    box-shadow:none
+}
+.accordion-button:not(.collapsed)::after{
+        background-image: var(--bs-accordion-btn-icon);
+
+}
+.faqAccordion{
+    width:60%;
+    margin:auto;
+     color:#154f9c !important;
+}
+.faqItem{
+    border-radius: 10px;
+    padding: 10px 0;
+    background-color: #fff;
+}
+.faqHeader .accordion-button,.faqHeader .accordion-button:not(.collapsed){
+    color:#154f9c !important;
+    font-weight: 700;
+}
+.accordion-body.textLeft{
+    text-align: left;
+    color: #484848;
+    font-size: 14px;
+    line-height: 28px;
+}
+/*tabs component*/
+.nav-tabs{
+       border-color:#fff
+
+}
+.nav-tabs .nav-item .nav-link{
+    color:#7c8795;
+   border-color:transparent
+}
+.nav-tabs .nav-item .nav-link.active{
+    color: #154f9c;
+    font-weight: 700;
+    border: none;
+     border-top:2px solid #154f9c;
+}
+.slideTab .nav-tabs .nav-item .nav-link{
+    width: 50%;
+    margin: auto;
+
+    color:#7c8795;
+   border-color:#fff;
+   padding:15px 0;
+}
+.slideTab .nav-tabs .nav-item .nav-link.active{
+    color: #154f9c;
+    font-weight: 700;
+    border: none;
+     border-bottom:3px solid #154f9c;
+     width: 50%;
+    margin: auto;
+
+}
+/*responsive -------mediaquery*/
+@media (max-width: 767.99px) {
+  .faqAccordion{
+    width:95%;
+    margin:auto;
+     color:#154f9c !important;
+}
 }
